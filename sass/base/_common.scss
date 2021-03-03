@@ -1,0 +1,57 @@
+body {
+  color: var(--primary-text-color);
+    background-color: var(--main-background-color);
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+  }
+  /* Deleteted space around img */
+  img {
+    display: block;
+  }
+
+  /* Fonts for headers & margin reset */
+h1, h2, h3, h4,h5,h6 {
+  font-family: Roboto;
+  margin: 0;
+}
+/* Margin reset for lists */
+ul, 
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Pharagraphs margin reset */
+p {
+  margin: 0;
+}
+/* --link decoration --*/
+.link {
+  text-decoration: none;
+  color: var(--footer-link-color);
+}
+/* --- end link decoration */
+
+/* Ul List decoration  class */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.adress {
+  font-style: normal;
+}
+/* end list decoration */
+
+
+/* ===Section padding 94px */
+.section-padding-bottom {
+  padding-bottom: 94px;
+}
+
+
+
+
+
+
