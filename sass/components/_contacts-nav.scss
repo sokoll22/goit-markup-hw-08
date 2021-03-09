@@ -1,29 +1,60 @@
 /* Contacts nav flexbox */
-.contacts {
-  display: flex;
-  margin-left: auto;
-
-  & .link {
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+/*==== Tablet styles ====*/
+@media screen and (min-width:768px) {
+  .contacts {
     
-    color: var(--secondary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    
-    transition: color var(--transition-delay-var) var(--timing-func);
+    &__item {
+      margin-left: 84px;
     }
-} 
+  
+    & .link {
+      display: flex;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      
+      color: var(--secondary-text-color);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      
+      transition: color var(--transition-delay-var) var(--timing-func);
+      }
+  } 
+}
 
-/* Adding margin-left for all ".contact .items"
+/*==== Desktop styles ==== */
+
+@media screen and (min-width:1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+  
+    & .link {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      
+      color: var(--secondary-text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      
+      transition: color var(--transition-delay-var) var(--timing-func);
+      }
+  }
+
+  /* Adding margin-left for all ".contact .items"
 except first one. Reading from bottom to top item. 
 Same to ":not(:last-child) function */
 .contacts__item + .contacts__item {
-margin-left: 50px;
+  margin-left: 50px;
+  }
 }
+ 
+
+
 
 .mail-link {
 display: flex;
