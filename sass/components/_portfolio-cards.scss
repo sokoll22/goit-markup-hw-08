@@ -3,7 +3,20 @@
 
 
   /* ==== Portfolio  cards */
- 
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px;
+
+    & .filter-name {
+      padding: 0;
+    }
+
+    & .card-header {
+      color: var(--primary-text-color);
+    }
+  }
   .card {
     margin: 15px;
     background: #FFFFFF;
@@ -19,20 +32,7 @@
       line-height: 1.87;
     }
   } 
-  .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: -15px;
-
-    & .filter-name {
-      padding: 0;
-    }
-
-    & .card-header {
-      color: var(--primary-text-color);
-    }
-  }
+ 
   
   /* === Overlay hover effect === */
   .card-img-wrapper {

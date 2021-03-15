@@ -24,6 +24,7 @@
   --hero-background-color: #C4C4C4;
   --timing-func: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-delay-var: 250ms;
+  --card-set-gap: 30px;
 }
 
 /* Class visually-hidden for headers */
@@ -50,6 +51,8 @@ body {
 /* Deleteted space around img */
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Fonts for headers & margin reset */
@@ -436,21 +439,6 @@ Same to ":not(:last-child) function */
 
 /* === Portfolio CSS === */
 /* ==== Portfolio  cards */
-.card {
-  margin: 15px;
-  background: #FFFFFF;
-  outline: 1px solid #EEEEEE;
-  box-sizing: border-box;
-  transition: box-shadow var(--transition-delay-var) var(--timing-func);
-}
-
-.card .filter-name {
-  color: var(--secondary-text-color);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-}
-
 .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -464,6 +452,21 @@ Same to ":not(:last-child) function */
 
 .card-list .card-header {
   color: var(--primary-text-color);
+}
+
+.card {
+  margin: 15px;
+  background: #FFFFFF;
+  outline: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  transition: box-shadow var(--transition-delay-var) var(--timing-func);
+}
+
+.card .filter-name {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
 }
 
 /* === Overlay hover effect === */
@@ -921,45 +924,104 @@ Same to ":not(:last-child) function */
 }
 
 /* ====Hero==== */
+/*=== Mobile styles ===*/
 .hero {
   color: var(--main-background-color);
   background-color: var(--hero-background-color);
-  font-size: 44px;
-  line-height: 1.4;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
-  letter-spacing: 0.06em;
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 .hero__title {
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
   margin-top: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
 
 .hero__image {
-  max-width: 1600px;
-  min-height: 600px;
+  width: 100%;
+  max-width: 480px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-background-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-img-mobile.jpg);
   background-size: cover;
   background-position: center;
+}
+
+/*===== Hero-image@2x for mobile*/
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .hero__image {
+    background-image: url(../../img/hero/hero-img-mobile@2x.jpg);
+  }
+}
+
+/*===== Styles and Hero-image for tablet ====*/
+@media screen and (min-width: 768px) {
+  .hero__image {
+    max-width: 768px;
+    background-image: url(../../img/hero/hero-img-tablet.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero__image {
+    background-image: url(../../img/hero/hero-img-tablet@2x.jpg);
+  }
+}
+
+/*===== Hero-image for desktop ====*/
+@media screen and (min-width: 1200px) {
+  .hero {
+    color: var(--main-background-color);
+    background-color: var(--hero-background-color);
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  .hero__image {
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--hero-background-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-img-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero__image {
+    background-image: url(../../img/hero/hero-img-desktop@2x.jpg);
+  }
 }
 
 /* ====End hero=== */
 /*====Features==== */
 .features {
-  padding-top: 94px;
+  margin-top: 60px;
 }
 
-.features__list {
-  display: flex;
+.section-padding-bottom {
+  padding-bottom: 60px;
 }
 
 .feature__item {
+  width: 100%;
   min-width: 270px;
 }
 
@@ -969,37 +1031,36 @@ Same to ":not(:last-child) function */
   background-color: var(--secondary-background-color);
   background-repeat: no-repeat;
   background-position: center;
-  width: 270px;
-  height: 120px;
+  width: 100%;
+  min-width: 270px;
+  min-height: 120px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.feature__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .icon-antena::before {
-  background-image: url(../img/antenna.png);
+  background-image: url(../../img/features/antenna.png);
 }
 
 .icon-vector::before {
-  background-image: url(../img/vector1.png);
+  background-image: url(../../img/features/vector1.png);
 }
 
 .icon-diagram::before {
-  background-image: url(../img/diagram.png);
+  background-image: url(../../img/features/diagram.png);
 }
 
 .icon-astronaut::before {
-  background-image: url(../img/astronaut.png);
+  background-image: url(../../img/features/astronaut.png);
 }
 
 .feature__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -1010,6 +1071,17 @@ Same to ":not(:last-child) function */
   line-height: 1.71;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/*=== Mobile Styles ====*/
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .feature__item {
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+  }
 }
 
 /*----End features---- */
