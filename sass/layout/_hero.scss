@@ -45,6 +45,11 @@
 
   /*===== Styles and Hero-image for tablet ====*/
   @media screen and (min-width: 768px) {
+    .hero {
+        margin-bottom: 60px;
+
+    }
+
     .hero__image {
       max-width: 768px;
       background-image: url(../../img/hero/hero-img-tablet.jpg);
