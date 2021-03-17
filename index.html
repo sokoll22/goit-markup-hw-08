@@ -177,12 +177,25 @@
     </section> -->
 
     <!-- Our team -->
-    <!-- <section class="team section-padding-bottom">
+    <section class="team section-padding-bottom">
       <div class="container">
         <h2 class="team__title">Наша команда</h2>
         <ul class="team-members list">
+
           <li class=team-members__card>
-              <img src="./img/img.jpg" alt="Игорь Демьяненко" width="270">
+              <picture>
+                <source srcset="./img/our-team/desktop/img-desktop.webp 1x, ./img/our-team/desktop/img-desktop@3x.webp 3x"
+                       media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./img/our-team/desktop/img-desktop.jpg 1x, ./img/our-team/desktop/img-desktop@3x.jpg 3x" 
+                        media="(min-width: 1200px)">
+
+                <source srcset="./img/our-team/tablet/img-tablet.webp 1x, ./img/our-team/tablet/img-tablet@2x.webp  2x"
+                        media="(min-width: 768px)" type="image/webp">
+                <source srcset="./img/our-team/tablet/img-tablet.jpg 1x, ./img/our-team/tablet/img-tablet@2x.jpg  2x"
+                         media="(min-width: 768px)">
+
+                <img src="./img/our-team/mobile/img-mobile.jpg" alt="Игорь Демьяненко" width="270">
+              </picture>
               <div class="member-card-content">
                 <h3 class="member-card-content__name">Игорь Демьяненко</h3>
                 <p class="member-card-content__position">Product Designer</p>
@@ -218,6 +231,7 @@
                 </ul>
             </div>
           </li>
+
           <li class=team-members__card>
               <img src="./img/img1.jpg" alt="Ольга Репина" width="270">
               <div class="member-card-content">
@@ -255,6 +269,7 @@
                 </ul>
             </div>
           </li>
+
           <li class=team-members__card>
               <img src="./img/img2.jpg" alt="Николай Тарасов" width="270">
               <div class="member-card-content">
@@ -292,6 +307,7 @@
                 </ul>
             </div>
           </li>
+
           <li class=team-members__card>
               <img src="./img/img3.jpg" alt="Михаил Ермаков" width="270">
               <div class="member-card-content">
@@ -331,7 +347,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
       <!-- ===Clients section === -->
       <!-- <section class="clients section-padding-bottom">
