@@ -4,6 +4,10 @@
   background-color: var(--secondary-background-color);
   // padding-top: 94px;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 28px;
@@ -14,28 +18,42 @@
 }
 
  .team-members {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  }
   
   &__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--main-background-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--main-background-color);
 
-    outline: 2px solid blue;
+      outline: 2px solid blue;
 
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-    &:last-child {
-      margin-bottom: 60px;
-    }
-    
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-      0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px; 
-  } 
-}
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+
+      @media screen and (max-width: 767px) {
+          &:not(:last-child) {
+          margin-bottom: 30px;
+          }
+          &:last-child {
+            margin-bottom: 60px;
+          }        
+        } 
+
+        @media screen and (min-width:768px) {
+          margin-left: var(--card-set-gap);
+          margin-top: var(--card-set-gap);
+        }
+    } 
+ }
 
 .member-card-content {
   display: flex;
@@ -62,9 +80,9 @@
     line-height: 1.18;
     align-self: center;
     margin-bottom: 16px;
-  }
+    }
 }
-
+ 
 // .team {
 //   background-color: var(--secondary-background-color);
 //   padding-top: 94px;

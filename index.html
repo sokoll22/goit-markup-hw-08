@@ -150,12 +150,21 @@
     </section>
 
     <!-- What we do -->
-    <!-- <section class="our-works section-padding-bottom">
+    <section class="our-works section-padding-bottom">
       <div class="container">
         <h2 class="our-works__title">Чем мы занимаемся</h2>
         <ul class="our-works-list">
           <li class="our-works-list__item list">
-            <img src="./img/working-man.jpg" alt="working-man" width="370">
+
+            <picture>
+              <source srcset="./img/our-works/working-man.webp 1x, ./img/our-works/working-man@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+              <source srcset="./img/our-works/working-man.jpg 1x, ./img/our-works/working-man@2x.jpg 2x"
+                media="(min-width: 1200px)">
+            
+              <img src="./img/our-works/working-man.jpg" alt="working-man">
+            </picture>
+            
             <div class="our-works-overlay-container">
               <p class="our-works-overlay-container__title">десктопные приложения</p>
             </div>
@@ -174,7 +183,7 @@
           </li>
         </ul>
     </div>
-    </section> -->
+    </section>
 
     <!-- Our team -->
     <section class="team section-padding-bottom">

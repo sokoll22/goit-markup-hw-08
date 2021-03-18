@@ -134,7 +134,8 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .features .container {
+  .features .container,
+  .team .container {
     margin-left: auto;
     margin-right: auto;
   }
@@ -1295,12 +1296,33 @@ Same to ":not(:last-child) function */
   background-color: var(--secondary-background-color);
 }
 
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+  }
+}
+
 .team__title {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.178;
   text-align: center;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-members {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  }
 }
 
 .team-members__card {
@@ -1321,12 +1343,20 @@ Same to ":not(:last-child) function */
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-members__card:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .team-members__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .team-members__card:last-child {
+    margin-bottom: 60px;
+  }
 }
 
-.team-members__card:last-child {
-  margin-bottom: 60px;
+@media screen and (min-width: 768px) {
+  .team-members__card {
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
 }
 
 .member-card-content {
@@ -1366,6 +1396,12 @@ Same to ":not(:last-child) function */
 }
 
 /* ---what we do--- */
+@media screen and (max-width: 1199px) {
+  .our-works {
+    display: none;
+  }
+}
+
 .our-works__title {
   font-weight: 700;
   font-size: 36px;
