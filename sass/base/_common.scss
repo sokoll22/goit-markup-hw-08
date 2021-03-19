@@ -47,9 +47,31 @@ p {
 /* end list decoration */
 
 
+/* ===Section padding 60px */
+@media screen and (max-width: 1199px) {
+  .section-padding-bottom {
+    padding-bottom: 60px;
+  }
+}
 /* ===Section padding 94px */
-.section-padding-bottom {
-  padding-bottom: 94px;
+@media screen and (min-width: 1200px) {
+  .section-padding-bottom {
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .padding-top-bottom {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .padding-top-bottom {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 
