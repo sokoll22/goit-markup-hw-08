@@ -122,6 +122,8 @@ p {
 
 .container {
   width: 100%;
+  min-width: 480px;
+  margin: 0 auto;
   padding: 0 15px;
   outline: 1px solid red;
 }
@@ -142,6 +144,10 @@ p {
   .footer .container {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .clients .container {
+    min-width: 480px;
+    margin: 0 auto;
   }
 }
 
@@ -417,21 +423,41 @@ Same to ":not(:last-child) function */
   cursor: pointer;
 }
 
-/* Filter buttons */
-.filters {
-  padding-top: 94px;
-  padding-bottom: 94px;
+/* ==== Filter buttons ===== */
+@media screen and (max-width: 1199px) {
+  .filters {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-family: inherit;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-buttons {
+    margin-bottom: -15px;
+  }
+  .filter-buttons__item {
+    margin-bottom: 15px;
+  }
 }
 
 .filter-buttons__item:not(:last-child) {
@@ -655,33 +681,33 @@ Same to ":not(:last-child) function */
 }
 
 /* === Subscribe form === */
-.footer-subscribe__title {
-  color: var(--main-background-color);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.footer-subscribe__input {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--main-background-color);
-  background-color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  width: 358px;
-  height: 50px;
-  padding-left: 16px;
-  margin-bottom: 20px;
-}
-
-.footer-subscribe__icon {
-  width: 34px;
-  height: 34px;
-  padding-left: 10px;
+@media screen and (max-width: 1199px) {
+  .footer-subscribe__title {
+    color: var(--main-background-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .footer-subscribe__input {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--main-background-color);
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-width: 450px;
+    height: 50px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+  .footer-subscribe__icon {
+    width: 34px;
+    height: 34px;
+    padding-left: 10px;
+  }
 }
 
 /* === Subscribe form for desktop === */
@@ -747,6 +773,16 @@ Same to ":not(:last-child) function */
   padding: 40px;
   -webkit-transition: var(--transition-delay-var) var(--timing-func);
   transition: var(--transition-delay-var) var(--timing-func);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 90%;
+    max-width: 450px;
+    height: 90%;
+    max-height: 609px;
+    overflow-y: scroll;
+  }
 }
 
 .modal__close-btn {
@@ -957,26 +993,8 @@ Same to ":not(:last-child) function */
   height: 12px;
 }
 
-/* LAYOUTS */
-.header {
-  background-color: #ccc;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #ececec;
-}
-
+/* === Mobile menu ==== */
 @media screen and (max-width: 767px) {
-  .site-nav {
-    display: none;
-  }
-  .contacts {
-    display: none;
-  }
-  /* Main flexbox for header */
-  .header .logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
   .burger-btn,
   .mobile-close-btn {
     background-color: transparent;
@@ -1003,11 +1021,11 @@ Same to ":not(:last-child) function */
     fill: var(--accent-color);
   }
   .mobile-menu {
-    background-color: var(--main-background-color);
     position: absolute;
     width: 100%;
     max-width: 480px;
     height: 100vh;
+    min-height: 796px;
     top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(0%);
@@ -1017,6 +1035,7 @@ Same to ":not(:last-child) function */
     transition: transform 500ms linear;
     transition: transform 500ms linear, -webkit-transform 500ms linear;
     padding: 48px 40px;
+    background-color: var(--main-background-color);
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
@@ -1075,7 +1094,7 @@ Same to ":not(:last-child) function */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 48px;
+    padding-bottom: 48px;
   }
   .mobile-menu-social-links__item {
     position: relative;
@@ -1100,6 +1119,29 @@ Same to ":not(:last-child) function */
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
+  }
+}
+
+/* LAYOUTS */
+.header {
+  min-width: 480px;
+  background-color: #ccc;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ececec;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+  .contacts {
+    display: none;
+  }
+  /* Main flexbox for header */
+  .header .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -1130,6 +1172,7 @@ Same to ":not(:last-child) function */
 /* ====Hero==== */
 /*=== Mobile styles ===*/
 .hero {
+  min-width: 480px;
   color: var(--main-background-color);
   background-color: var(--hero-background-color);
   padding-top: 118px;
@@ -1656,8 +1699,14 @@ Same to ":not(:last-child) function */
 /* ===Footer==== */
 /*==== Mobile styles === */
 .footer {
+  min-width: 480px;
   background-color: var(--footer-background-color);
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .footer .logo {
@@ -1669,6 +1718,12 @@ Same to ":not(:last-child) function */
 
 .adress {
   color: var(--footer-adress-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-contacts {
+    padding-bottom: 60px;
+  }
 }
 
 .footer-contacts-list__item {
@@ -1689,6 +1744,12 @@ Same to ":not(:last-child) function */
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-social-network-form {
+    padding-bottom: 60px;
+  }
 }
 
 .footer-social-network-form-list {
@@ -1746,11 +1807,13 @@ Same to ":not(:last-child) function */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
+/*==== Desktop styles ====*/
 @media screen and (min-width: 1200px) {
   .footer {
     display: -webkit-box;

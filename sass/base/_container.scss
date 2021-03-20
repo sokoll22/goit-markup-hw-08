@@ -1,6 +1,10 @@
 
 .container {
   width: 100%;
+  min-width: 480px;
+  margin: 0 auto;
+
+
   padding: 0 15px;
   outline: 1px solid red;
 
@@ -15,7 +19,13 @@
       padding-top: 60px;
       padding-bottom: 60px;
     }
+    .clients & {
+      min-width: 480px;
+      margin: 0 auto;
+    }
   }
+
+  
 }
 
 @media screen and (min-width: 480px) {

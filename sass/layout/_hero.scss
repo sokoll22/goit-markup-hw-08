@@ -3,7 +3,9 @@
 
 
 /*=== Mobile styles ===*/
-  .hero {
+.hero {
+  min-width: 480px;
+
   color: var(--main-background-color);
   background-color: var(--hero-background-color);
   padding-top: 118px;
