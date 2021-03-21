@@ -1,8 +1,22 @@
 body {
-  color: var(--primary-text-color);
+    color: var(--primary-text-color);
     background-color: var(--main-background-color);
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
+    min-width: 480px;
+    width: 100%;
+
+    @media screen and(min-width: 480px) {
+      background-color: green;
+    }
+
+    @media screen and(min-width: 768px) {
+      background-color: yellow;
+    }
+
+    @media screen and(min-width: 1200px) {
+      background-color: red;
+    }
   }
   /* Deleteted space around img */
   img {

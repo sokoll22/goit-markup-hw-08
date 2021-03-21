@@ -3,10 +3,12 @@
   width: 100%;
   min-width: 480px;
   margin: 0 auto;
-
-
   padding: 0 15px;
   outline: 1px solid red;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 
   .header & {
     display: flex;
@@ -24,16 +26,10 @@
       margin: 0 auto;
     }
   }
-
-  
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-  width: 480px;
-  margin: 0 auto;
-  }
-}
+
+
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -43,13 +39,13 @@
       align-items: center;
       }
 
-      .features &,
-      .team & {
-        margin-left: auto;
-        margin-right: auto;
+    .features &,
+    .team &  {
+      margin-left: auto;
+      margin-right: auto;
       }
-      .clients & {
-        padding-bottom: 60px;
+    .clients & {
+      padding-bottom: 60px;
       }
   }
 }
@@ -57,10 +53,6 @@
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 /* -- Container -- */

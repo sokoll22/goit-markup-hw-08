@@ -33,14 +33,19 @@
     }
 
     .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: scroll;
+
       position: absolute;
-      width: 100%;
+      z-index: 1;
+      width: 95%; 
       max-width: 480px;
       height: 100vh;
-      min-height: 796px;
       top: 0;
       left: 50%;
-      transform: translateX(-50%) translateY(0%);
+      transform: translateX(-50%) translateY(-100%);
       transition: transform 500ms linear;
       padding: 48px 40px;
       
@@ -52,13 +57,9 @@
         padding-top: 16px;
         padding-bottom: 16px;
         }
-    
-        &__nav {
-          margin-bottom: 302px;
-        }
-    
+
         &.is-open {
-          transform: translateX(-50%) translateY(-100%);
+          transform: translateX(-50%) translateY(0%);
         }
     
         &__link {
