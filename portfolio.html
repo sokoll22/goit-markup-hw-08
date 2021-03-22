@@ -488,6 +488,58 @@
         </div>
     </div>
     </footer>
+    <!-- === Backdrop === -->
+    <div class="backdrop is-hidden " data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close-btn" data-modal-close>
+          <svg class="modal__close-icon">
+            <use href="./img/sprite.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+        <form action="#" class="modal__form">
+    
+          <label class="modal__form-input-label">
+            <span class="input-label__name">Имя</span>
+            <span class="modal__form-input-wrapper">
+              <input type="text" name="user-name" class="modal__form-input">
+              <svg class="modal__form-icon name-icon">
+                <use href="./img/sprite.svg#icon-name"></use>
+              </svg>
+            </span>
+          </label>
+    
+          <label class="modal__form-input-label">Телефон
+            <span class="modal__form-input-wrapper">
+              <input type="text" name="user-telephone" class="modal__form-input">
+              <svg class="modal__form-icon phone-icon">
+                <use href="./img/sprite.svg#icon-phone-img"></use>
+              </svg>
+            </span>
+          </label>
+    
+          <label class="modal__form-input-label">Почта
+            <span class="modal__form-input-wrapper">
+              <input type="text" name="user-e-mail" class="modal__form-input">
+              <svg class="modal__form-icon mail-icon">
+                <use href="./img/sprite.svg#icon-envelope"></use>
+              </svg>
+            </span>
+          </label>
+    
+          <label class="modal__form-input-label">Коментарий
+            <textarea name="user-message" class="modal__form-message" placeholder="Введите текст"></textarea>
+          </label>
+    
+          <input type="checkbox" name="user-policy" id="policy-check" class="modal__form-check-policy visually-hidden">
+          <label for="policy-check" class="modal__form-label-policy">Соглашаюсь с рассылкой и принимаю 
+            <a href="" class="modal__form-label-policy-link link"> Условия договора</a>
+          </label>
+          <button class="modal__form-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

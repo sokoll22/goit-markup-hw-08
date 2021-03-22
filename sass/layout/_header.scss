@@ -1,5 +1,6 @@
 .header {
-  min-width: 480px;
+  // min-width: 480px;
+  width: 100%;
 
   background-color: #ccc;
   border-bottom-style: solid;
@@ -30,14 +31,6 @@
 /*=== Tablet style ===*/
 
 @media screen and (min-width: 768px) {
-  .burger-btn {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-
   .header {
     & .logo {
       padding-top: 26px;
