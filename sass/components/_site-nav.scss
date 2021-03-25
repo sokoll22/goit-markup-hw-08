@@ -9,27 +9,28 @@
     color: var(--accent-color);
   }
 
-    & .link {
-      position: relative;
-    
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-    
-      color: var(--primary-text-color);
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.2;
-      letter-spacing: 0.02em;
-    
-      transition: color var(--transition-delay-var) var(--timing-func);
-    }
+  & .link {
+    position: relative;
+  
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  
+    transition: color var(--transition-delay-var) var(--timing-func);
+  }
 
-    &__item:not(:last-child) {
-      margin-right: 50px;
-    }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-/* Underline for nav items */
+
+                        /* === Underline for nav items ==== */
 .current::after {
   position: absolute;
   left: 0;

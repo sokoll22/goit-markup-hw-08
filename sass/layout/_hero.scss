@@ -4,30 +4,31 @@
 
 /*=== Mobile styles ===*/
 .hero {
-  // min-width: 480px;
-
   color: var(--main-background-color);
   background-color: var(--hero-background-color);
-  padding-top: 118px;
-  padding-bottom: 118px;
   text-align: center;
 
-
+  padding-top: 118px;
+  padding-bottom: 118px;
+  
   &__title {
     font-size: 26px;
     line-height: 1.62;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
+
     margin-top: 0;
     margin-bottom: 30px;
-    text-transform: uppercase;
   }
 
   &__image {
     width: 100%;
     max-width: 480px;
     min-height: 400px;
+
     margin-left: auto;
     margin-right: auto;
+
     background-color: var(--hero-background-color);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
      url(../../img/hero/hero-img-mobile.jpg);
@@ -79,16 +80,19 @@
         font-size: 44px;
         line-height: 1.4;
         letter-spacing: 0.06em;
+        text-transform: uppercase;
+
         margin-top: 0;
         margin-bottom: 30px;
-        text-transform: uppercase;
       }
     
       &__image {
         max-width: 1600px;
         min-height: 600px;
+
         margin-left: auto;
         margin-right: auto;
+        
         background-color: var(--hero-background-color);
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
          url(../../img/hero/hero-img-desktop.jpg);

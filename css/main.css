@@ -46,25 +46,6 @@ body {
   background-color: var(--main-background-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  width: 100%;
-}
-
-@media screen and (min-width: 480px) {
-  body {
-    background-color: green;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    background-color: yellow;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  body {
-    background-color: red;
-  }
 }
 
 /* === Block scrolling body when modal window is open ==== */
@@ -148,7 +129,6 @@ p {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -174,9 +154,6 @@ p {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  .clients .container {
-    margin: 0 auto;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -190,11 +167,6 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .features .container,
-  .team .container {
-    margin-left: auto;
-    margin-right: auto;
   }
   .clients .container {
     padding-bottom: 60px;
@@ -244,7 +216,7 @@ p {
   margin-right: 50px;
 }
 
-/* Underline for nav items */
+/* === Underline for nav items ==== */
 .current::after {
   position: absolute;
   left: 0;
@@ -463,9 +435,27 @@ Same to ":not(:last-child) function */
       -ms-flex-pack: center;
           justify-content: center;
   font-family: inherit;
-  /*==== Styles for mobyle filter buttons === */
-  /*==== Styles for tablet filter buttons === */
-  /*==== Styles for desktop filter buttons === */
+}
+
+.filter-buttons__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-buttons .filter-name {
+  color: var(--primary-text-color);
+  background-color: #F5F4FA;
+  -webkit-transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), -webkit-box-shadow var(--transition-delay-var) var(--timing-func);
+  transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), -webkit-box-shadow var(--transition-delay-var) var(--timing-func);
+  transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), box-shadow var(--transition-delay-var) var(--timing-func);
+  transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), box-shadow var(--transition-delay-var) var(--timing-func), -webkit-box-shadow var(--transition-delay-var) var(--timing-func);
+}
+
+.filter-buttons .filter-name:hover,
+.filter-buttons .filter-name:focus {
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 @media screen and (max-width: 767px) {
@@ -492,27 +482,6 @@ Same to ":not(:last-child) function */
   .filter-buttons {
     margin-bottom: 50px;
   }
-}
-
-.filter-buttons__item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.filter-buttons .filter-name {
-  color: var(--primary-text-color);
-  background-color: #F5F4FA;
-  -webkit-transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), -webkit-box-shadow var(--transition-delay-var) var(--timing-func);
-  transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), -webkit-box-shadow var(--transition-delay-var) var(--timing-func);
-  transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), box-shadow var(--transition-delay-var) var(--timing-func);
-  transition: color var(--transition-delay-var) var(--timing-func), background-color var(--transition-delay-var) var(--timing-func), box-shadow var(--transition-delay-var) var(--timing-func), -webkit-box-shadow var(--transition-delay-var) var(--timing-func);
-}
-
-.filter-buttons .filter-name:hover,
-.filter-buttons .filter-name:focus {
-  color: var(--main-background-color);
-  background-color: var(--accent-color);
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-name {
@@ -654,9 +623,9 @@ Same to ":not(:last-child) function */
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition: opacity var(--transition-delay-var) var(--timing-func), -webkit-transform var(--transition-delay-var) var(--timing-func);
@@ -695,10 +664,7 @@ Same to ":not(:last-child) function */
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  padding: 20px 24px;
 }
 
 /* === Portfolio Cards === */
@@ -893,13 +859,13 @@ Same to ":not(:last-child) function */
 
 .modal__form-icon {
   position: absolute;
+  top: 50%;
+  left: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: fill var(--transition-delay-var) var(--timing-func);
   transition: fill var(--transition-delay-var) var(--timing-func);
   display: block;
-  top: 50%;
-  left: 12px;
   width: 18px;
   height: 18px;
 }
@@ -1162,7 +1128,6 @@ Same to ":not(:last-child) function */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 48px;
   }
   .mobile-menu-social-links__item {
     position: relative;
@@ -1201,9 +1166,9 @@ Same to ":not(:last-child) function */
 }
 
 /* LAYOUTS */
+/*=== Header ===*/
 .header {
   width: 100%;
-  background-color: #ccc;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #ececec;
@@ -1216,7 +1181,7 @@ Same to ":not(:last-child) function */
   .contacts {
     display: none;
   }
-  /* Main flexbox for header */
+  /*====  Main flexbox for header ==== */
   .header .logo {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -1226,8 +1191,7 @@ Same to ":not(:last-child) function */
 /*=== Tablet style ===*/
 @media screen and (min-width: 768px) {
   .header .logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding: 26px 0;
     margin-right: 88px;
   }
 }
@@ -1236,8 +1200,7 @@ Same to ":not(:last-child) function */
 @media screen and (min-width: 1200px) {
   .header .logo {
     margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 24px 0 25px 0;
   }
 }
 
@@ -1246,18 +1209,18 @@ Same to ":not(:last-child) function */
 .hero {
   color: var(--main-background-color);
   background-color: var(--hero-background-color);
+  text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
-  text-align: center;
 }
 
 .hero__title {
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
-  text-transform: uppercase;
 }
 
 .hero__image {
@@ -1311,9 +1274,9 @@ Same to ":not(:last-child) function */
     font-size: 44px;
     line-height: 1.4;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 30px;
-    text-transform: uppercase;
   }
   .hero__image {
     max-width: 1600px;
@@ -1516,7 +1479,6 @@ Same to ":not(:last-child) function */
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--main-background-color);
-  outline: 2px solid blue;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -1649,9 +1611,9 @@ Same to ":not(:last-child) function */
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: calc(-1 * var(--card-set-gap));
     margin-top: calc(-1 * var(--card-set-gap));
   }
@@ -1683,9 +1645,16 @@ Same to ":not(:last-child) function */
             align-items: center;
     border: 1px var(--social-icon-color) solid;
     border-radius: 5px;
-    height: 90px;
+    width: 100%;
+    min-height: 90px;
     -webkit-transition: border var(--transition-delay-var) var(--timing-func);
     transition: border var(--transition-delay-var) var(--timing-func);
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 480px) {
+  .clients-link {
+    max-width: 208px;
   }
 }
 
@@ -1701,6 +1670,7 @@ Same to ":not(:last-child) function */
   }
   .clients-link__icon {
     min-width: 45px;
+    max-width: 128px;
     height: 50px;
     fill: var(--social-icon-color);
     -webkit-transition: fill var(--transition-delay-var) var(--timing-func);

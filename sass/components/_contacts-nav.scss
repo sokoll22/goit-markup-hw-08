@@ -3,7 +3,6 @@
 /*==== Tablet styles ====*/
 @media screen and (min-width:768px) {
   .contacts {
-    
     &__item {
       margin-left: 84px;
     }
@@ -24,8 +23,7 @@
   } 
 }
 
-/*==== Desktop styles ==== */
-
+                /*==== Desktop styles ==== */
 @media screen and (min-width:1200px) {
   .contacts {
     display: flex;
@@ -54,13 +52,10 @@ Same to ":not(:last-child) function */
   }
 }
  
-
-
-
 .mail-link {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &:focus {
@@ -68,7 +63,7 @@ align-items: center;
   }
   &:hover .icon-envelope,
   &:focus .icon-envelope {
-  fill: var(--accent-color);
+    fill: var(--accent-color);
   }
 }
 
@@ -84,7 +79,6 @@ align-items: center;
   .mobile-menu-contacts__link:hover &,
   .mobile-menu-contacts__link:focus & {
     fill: var(--accent-color);
-
   }
 }
 

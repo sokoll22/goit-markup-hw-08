@@ -1,8 +1,6 @@
                       /* ===Footer==== */
-
-/*==== Mobile styles === */
+                /*==== Mobile styles === */
 .footer {
-  // min-width: 480px;
   background-color: var(--footer-background-color);
 
   @media screen and (max-width: 1199px) {
@@ -13,6 +11,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.17;
+
     margin-bottom: 20px;
   }
 }
@@ -32,6 +31,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+
     &:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -46,6 +46,7 @@
     line-height: 1.142;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
     margin-bottom: 20px;
   }
 
@@ -71,8 +72,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       width: 44px;
       height:44px;
+
       border-radius: 50%;
       background-color: rgba(255,255,255,0.1);
       background-size: cover ;
@@ -104,23 +107,22 @@
 
 @media screen and (min-width: 1200px) {
 .footer {
+  display: flex;
+  background-color: var(--footer-background-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  & .container {
     display: flex;
-    background-color: var(--footer-background-color);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    & .container {
-      display: flex;
-      align-self: baseline;
-    }
-
-    & .logo {
-      margin-bottom: 20px;
-    }
+    align-self: baseline;
   }
+  & .logo {
+    margin-bottom: 20px;
+  }
+}
+
 .adress {
   color: var(--footer-adress-color);
 }
@@ -147,7 +149,6 @@
   }   
 }
 
-
 .footer-social-network-form {
   margin-right: 93px;
 
@@ -158,6 +159,7 @@
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
     margin-bottom: 20px;
   }
 }
@@ -172,12 +174,15 @@
   }
   &__item {
     display: flex;
+
     .link {
       display: flex;
       justify-content: center;
       align-items: center;
+
       width: 44px;
       height:44px;
+      
       border-radius: 50%;
       background-color: rgba(255,255,255,0.1);
       background-size: cover ;
